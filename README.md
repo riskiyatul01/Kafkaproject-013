@@ -19,3 +19,10 @@ Proyek ini merupakan implementasi sistem pemantauan kondisi gudang secara real-t
 └── README.md # File ini
 ```
 
+## Komponen Utama Infrastruktur Docker
+Semua layanan backend (Zookeeper, Kafka, Spark Master, Spark Worker) dijalankan sebagai container Docker yang dikelola oleh docker-compose.yml.
+- Zookeeper: Diperlukan oleh Kafka untuk manajemen cluster.
+- Kafka: Message broker yang menerima data dari producer dan menyediakannya untuk consumer. Dua topik akan dibuat:
+    - sensor-suhu-gudang
+    - sensor-kelembaban-gudang
+- Spark Master & Worker(s): Cluster Spark untuk memproses data stream dari Kafka menggunakan PySpark.
