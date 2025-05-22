@@ -80,6 +80,9 @@ kafka-topics --create --topic sensor-suhu-gudang --bootstrap-server kafka:9092 -
 ```
 kafka-topics --create --topic sensor-kelembaban-gudang --bootstrap-server kafka:9092 --replication-factor 1 --partitions 1
 ```
+
+![WhatsApp Image 2025-05-22 at 08 54 16_b35e2cc6](https://github.com/user-attachments/assets/3a5cc376-a5b7-4443-873b-800b5252cb96)
+
 ### 4. Jalankan Producer Kafka
 
 Producer akan mengirimkan data sensor simulasi ke topik Kafka.
